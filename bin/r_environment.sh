@@ -14,4 +14,5 @@ export LDFLAGS="-L/app/vendor/gcc/lib64 -L/app/vendor/gsl/lib"
 export CPPFLAGS="-I/app/vendor/glibc/string -I/app/vendor/glibc/time -I/app/vendor/gsl/include"
 export PKG_LDFLAGS=$LDFLAGS
 export PKG_CPPFLAGS=$CPPFLAGS
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/libreadline/:$JAVA_HOME/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/libreadline/:$JAVA_HOME/lib:/app/vendor/jdk1.7.0_51/lib
+export PATH=$PATH:$JAVA_HOME/bin/:/app/vendor/jdk1.7.0_51/bin/
