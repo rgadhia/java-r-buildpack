@@ -129,7 +129,7 @@ echo "Copying lib64 files into /app/vendor/R/lib64/R/lib" | indent
 cp /app/vendor/gcc/lib64/* /app/vendor/R/lib64/R/lib
 
 # R needs to know where gfortran and glibc header files are
-export PATH="$JAVA_HOME/bin:/app/vendor/R/bin:/app/vendor/gcc/bin:$PATH"
+export PATH="$JAVA_HOME/bin/:/app/vendor/jdk1.7.0_51/bin/:/app/vendor/R/bin:/app/vendor/gcc/bin:$PATH"
 echo "PATH set to '$PATH'" | indent
 
 export LDFLAGS="-L/app/vendor/gcc/lib64 -L/app/vendor/gsl/lib"
@@ -150,7 +150,7 @@ cp /lib/libreadline.so.6 /app/vendor/libreadline/libreadline.so.5
 echo `ls -l /app/vendor/libreadline/`
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/libreadline/:$JAVA_HOME/lib:/app/vendor/jdk1.7.0_51/lib
 echo "LD_LIBRARY_PATH='$LD_LIBRARY_PATH'"
-export PATH=$PATH:$JAVA_HOME/bin/:/app/vendor/jdk1.7.0_51/bin/
+
 
 # copy over 'r' environment
 mkdir -p $BUILD_DIR/.profile.d
