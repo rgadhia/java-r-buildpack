@@ -146,7 +146,7 @@ echo "R_INCLUDE set to '$R_INCLUDE'" | indent
 #cd /lib
 #ln -s ./libreadline.so.6 libreadline.so.5
 mkdir /app/vendor/libreadline
-cp /lib/libreadline.so.6 /app/vendor/libreadline/
+cp /lib/libreadline.so.6 /app/vendor/libreadline/libreadline.so.5
 
 # copy over 'r' environment
 mkdir -p $BUILD_DIR/.profile.d
