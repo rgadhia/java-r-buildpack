@@ -148,7 +148,7 @@ echo "R_INCLUDE set to '$R_INCLUDE'" | indent
 mkdir /app/vendor/libreadline
 cp /lib/libreadline.so.6 /app/vendor/libreadline/libreadline.so.5
 echo `ls -l /app/vendor/libreadline/`
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/libreadline/:$JAVA_HOME/jre/lib/i386:$JAVA_HOME/jre/lib/i386/client
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/libreadline/:$JAVA_HOME/bin
 echo "LD_LIBRARY_PATH='$LD_LIBRARY_PATH'"
 
 # copy over 'r' environment
