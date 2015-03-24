@@ -149,7 +149,7 @@ echo "R_INCLUDE set to '$R_INCLUDE'" | indent
 #cd /lib
 #ln -s ./libreadline.so.6 libreadline.so.5
 mkdir -p /app/vendor/libreadline
-mkidr -p $VENDOR_DIR/libreadline
+mkdir -p $VENDOR_DIR/libreadline
 cp /lib/libreadline.so.6 /app/vendor/libreadline/libreadline.so.5
 cp /lib/libreadline.so.6 /$VENDOR_DIR/libreadline/libreadline.so.5
 
