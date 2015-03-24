@@ -96,7 +96,8 @@ echo "JAVA_CPPFLAGS: $JAVA_CPPFLAGS" | indent
 if [ -f "/usr/bin/java" ]; then
      echo "Java found on path" | indent
 else
-    ln -fs $JAVA_HOME/bin/java /usr/bin/java
+    BLAH=`ls -l /usr/bin/`
+    echo "ls /usr/bin is:  $BLAH"
 fi
 
 # vendor R into the slug
