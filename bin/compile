@@ -55,6 +55,8 @@ R_BINARIES="http://${S3_BUCKET}.s3.amazonaws.com/R-${R_VERSION}-binaries-${BUILD
 echo "R_BINARIES: $R_BINARIES" | indent
 
 VENDOR_DIR="$BUILD_DIR/vendor"
+echo "VENDOR_DIR: $VENDOR_DIR"
+
 R_BASE="$VENDOR_DIR/R"
 CRAN_MIRROR="http://cran.revolutionanalytics.com"
 
@@ -146,8 +148,11 @@ echo "R_INCLUDE set to '$R_INCLUDE'" | indent
 # hack for libreadline shared library version
 #cd /lib
 #ln -s ./libreadline.so.6 libreadline.so.5
-mkdir /app/vendor/libreadline
+mkdir -p /app/vendor/libreadline
+mkidr -p $VENDOR_DIR/libreadline
 cp /lib/libreadline.so.6 /app/vendor/libreadline/libreadline.so.5
+cp /lib/libreadline.so.6 /$VENDOR_DIR/libreadline/libreadline.so.5
+
 echo `ls -l /app/vendor/libreadline/`
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/libreadline/:$JAVA_HOME/lib:/app/vendor/jdk1.7.0_51/lib
 echo "LD_LIBRARY_PATH='$LD_LIBRARY_PATH'"
