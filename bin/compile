@@ -168,6 +168,9 @@ fi
 mkdir -p /app/vendor/R/lib64/R/doc/html
 touch /app/vendor/R/lib64/R/doc/html/R.css
 
+echo "Calling R CMD javareconf" | indent
+/app/vendor/R/bin/R CMD javareconf
+
 # install dependencies from CRAN
 echo "Executing init.r script" | indent
 
